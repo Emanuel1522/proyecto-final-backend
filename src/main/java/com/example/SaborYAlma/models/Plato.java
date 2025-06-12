@@ -36,12 +36,12 @@ public class Plato {
 
     //Relacion con carrito_items 1-N
     @OneToMany(mappedBy = "plato")
-    @JsonManagedReference
+    @JsonManagedReference(value="carritoItemPlato")
     private List<CarritoItem> carritoItems;
 
     //Relacion con detalles_pedido 1-N
     @OneToMany(mappedBy = "plato")
-    @JsonManagedReference
+    @JsonManagedReference(value="detallesPedidoPlato")
     private List<DetallesPedido> detallesPedidos;
 
 

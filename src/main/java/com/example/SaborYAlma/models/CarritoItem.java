@@ -21,13 +21,13 @@ public class CarritoItem {
     //Relacion con carritos N-1
     @ManyToOne
     @JoinColumn(name = "fk_carrito", referencedColumnName = "id_carrito")
-    @JsonBackReference
+    @JsonBackReference(value="carritoItemCarrito")
     private Carrito carrito;
 
     //Relacion con platos N-1
     @ManyToOne
     @JoinColumn(name = "fk_plato", referencedColumnName = "id_plato")
-    @JsonBackReference
+    @JsonBackReference(value="carritoItemPlato")
     private Plato plato;
 
 

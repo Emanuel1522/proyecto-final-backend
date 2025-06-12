@@ -32,12 +32,12 @@ public class Pedido {
     //Relacion con cliente N-1
     @ManyToOne
     @JoinColumn(name = "fk_cliente", referencedColumnName = "id_cliente")
-    @JsonBackReference
+    @JsonBackReference(value="pedidoCliente")
     private Cliente cliente;
 
     //Relacion con detalles_pedido 1-N
     @OneToMany(mappedBy = "pedido")
-    @JsonManagedReference
+    @JsonManagedReference(value="detallesPedidoPedido")
     private List<DetallesPedido> detallesPedidos;
 
 

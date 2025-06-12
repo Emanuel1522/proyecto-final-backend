@@ -21,13 +21,13 @@ public class DetallesPedido {
     //Relacion con pedido N-1
     @ManyToOne
     @JoinColumn(name = "fk_pedido", referencedColumnName = "id_pedido")
-    @JsonBackReference
+    @JsonBackReference(value="detallesPedidoPedido")
     private Pedido pedido;
 
     //Relacion con platos N-1
     @ManyToOne
     @JoinColumn(name = "fk_plato", referencedColumnName = "id_plato")
-    @JsonBackReference
+    @JsonBackReference(value="detallesPedidoPlato")
     private Plato plato;
 
 

@@ -29,7 +29,6 @@ public class CarritoControlador {
     }
 
 
-
     // Buscar todos
     @GetMapping
     public ResponseEntity<?> buscarTodos() {

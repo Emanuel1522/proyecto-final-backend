@@ -27,12 +27,12 @@ public class Carrito {
     //Relacion con cliente N-1
     @ManyToOne
     @JoinColumn(name = "fk_cliente", referencedColumnName = "id_cliente")
-    @JsonBackReference
+    @JsonBackReference(value="carritocliente")
     private Cliente cliente;
 
     //Relacion con carrito_items 1-N
     @OneToMany(mappedBy = "carrito")
-    @JsonManagedReference
+    @JsonManagedReference(value="carritoItemCarrito")
     private List<CarritoItem> carritoItems;
 
 

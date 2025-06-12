@@ -25,7 +25,7 @@ public class CarritoItemServicio {
     }
 
     //Buscar todos
-    public List<CarritoItem> listaCarritosItem() throws Exception {
+    public List<CarritoItem> listaCarritoItem() throws Exception {
         try {
             return this.repositorio.findAll();
         } catch (Exception error) {

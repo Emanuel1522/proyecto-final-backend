@@ -29,12 +29,12 @@ public class Cliente {
 
     //Relacion con carritos 1-N
     @OneToMany(mappedBy = "cliente")
-    @JsonManagedReference
+    @JsonManagedReference(value="carritocliente")
     private List<Carrito> carritos;
 
     //Relacion con pedido 1-N
     @OneToMany(mappedBy = "cliente")
-    @JsonManagedReference
+    @JsonManagedReference(value="pedidoCliente")
     private List<Pedido> pedidos;
 
 

@@ -2,7 +2,7 @@ http://localhost:8080/clientes
 {
     "nombre":"Juan",
     "apellido":"Ramirez",
-    "correo":"juan@gmail.com"
+    "correo":"juan@gmail.com",
     "contraseña":"juan123"
 
 
