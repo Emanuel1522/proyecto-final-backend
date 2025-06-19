@@ -1,4 +1,4 @@
-package com.example.SaborYAlma.models;
+package com.example.SaborYAlma.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -13,18 +13,13 @@ public class Cliente {
     @Column(name = "id_cliente")
     private Integer id;
 
-    @Column(length = 100, nullable = false)
     private String nombre;
 
-    @Column(length = 100, nullable = false)
     private String apellido;
 
-    @Column(length = 150, unique = true, nullable = false)
     private String correo;
 
-    @Column(length = 150, nullable = false)
     private String contraseña;
-
 
 
     //Relacion con carritos 1-N
@@ -38,7 +33,6 @@ public class Cliente {
     private List<Pedido> pedidos;
 
 
-
     public Cliente() {
     }
 
@@ -49,8 +43,6 @@ public class Cliente {
         this.correo = correo;
         this.contraseña = contraseña;
     }
-
-
 
     public Integer getId() {
         return id;

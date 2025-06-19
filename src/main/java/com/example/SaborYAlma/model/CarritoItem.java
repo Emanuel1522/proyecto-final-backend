@@ -1,4 +1,4 @@
-package com.example.SaborYAlma.models;
+package com.example.SaborYAlma.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -7,15 +7,12 @@ import jakarta.persistence.*;
 @Table(name = "carrito_items")
 public class CarritoItem {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_carrito_item")
     private Integer id;
 
     private Integer cantidad;
-
 
 
     //Relacion con carritos N-1
@@ -31,7 +28,6 @@ public class CarritoItem {
     private Plato plato;
 
 
-
     public CarritoItem() {
     }
 
@@ -39,8 +35,6 @@ public class CarritoItem {
         this.id = id;
         this.cantidad = cantidad;
     }
-
-
 
     public Integer getId() {
         return id;

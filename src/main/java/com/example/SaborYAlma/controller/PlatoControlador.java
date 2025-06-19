@@ -1,6 +1,6 @@
 package com.example.SaborYAlma.controller;
 
-import com.example.SaborYAlma.models.Plato;
+import com.example.SaborYAlma.model.Plato;
 import com.example.SaborYAlma.services.PlatoServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +12,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/plato")
 public class PlatoControlador {
+
     @Autowired
     PlatoServicio servicio;
+
 
     //Guardar
     @PostMapping
@@ -44,7 +46,6 @@ public class PlatoControlador {
         }
     }
 
-
     // Buscar por ID
     @GetMapping("/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable Integer id) {
@@ -59,7 +60,6 @@ public class PlatoControlador {
         }
     }
 
-
     // Actualizar
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@PathVariable Integer id, @RequestBody Plato nuevosDatosPlato) {
@@ -73,7 +73,6 @@ public class PlatoControlador {
                     .body(error.getMessage());
         }
     }
-
 
     // Eliminar
     @DeleteMapping("/{id}")

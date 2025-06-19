@@ -1,4 +1,4 @@
-package com.example.SaborYAlma.models;
+package com.example.SaborYAlma.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -7,15 +7,12 @@ import jakarta.persistence.*;
 @Table(name = "detalles_pedidos")
 public class DetallesPedido {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "detalles_pedido")
     private Integer id;
 
     private Integer cantidad;
-
 
 
     //Relacion con pedido N-1
@@ -31,7 +28,6 @@ public class DetallesPedido {
     private Plato plato;
 
 
-
     public DetallesPedido() {
     }
 
@@ -39,8 +35,6 @@ public class DetallesPedido {
         this.id = id;
         this.cantidad = cantidad;
     }
-
-
 
     public Integer getId() {
         return id;

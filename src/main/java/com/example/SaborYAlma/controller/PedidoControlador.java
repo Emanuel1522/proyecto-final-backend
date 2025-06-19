@@ -1,6 +1,6 @@
 package com.example.SaborYAlma.controller;
 
-import com.example.SaborYAlma.models.Pedido;
+import com.example.SaborYAlma.model.Pedido;
 import com.example.SaborYAlma.services.PedidoServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +12,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/pedidos")
 public class PedidoControlador {
+
     @Autowired
     PedidoServicio servicio;
+
 
     //Guardar
     @PostMapping
@@ -44,7 +46,6 @@ public class PedidoControlador {
         }
     }
 
-
     // Buscar por ID
     @GetMapping("/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable Integer id) {
@@ -59,7 +60,6 @@ public class PedidoControlador {
         }
     }
 
-
     // Actualizar
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@PathVariable Integer id, @RequestBody Pedido nuevosDatosPedido) {
@@ -73,7 +73,6 @@ public class PedidoControlador {
                     .body(error.getMessage());
         }
     }
-
 
     // Eliminar
     @DeleteMapping("/{id}")

@@ -1,6 +1,6 @@
 package com.example.SaborYAlma.repository;
 
-import com.example.SaborYAlma.models.Plato;
+import com.example.SaborYAlma.model.Plato;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

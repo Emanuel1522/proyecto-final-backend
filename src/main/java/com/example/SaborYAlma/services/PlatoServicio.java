@@ -1,7 +1,7 @@
 package com.example.SaborYAlma.services;
 
 import com.example.SaborYAlma.helper.APIMensajes;
-import com.example.SaborYAlma.models.Plato;
+import com.example.SaborYAlma.model.Plato;
 import com.example.SaborYAlma.repository.IPlatoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,7 @@ public class PlatoServicio {
 
     @Autowired
     IPlatoRepositorio repositorio;
+
 
     //Guardar carrito
     public Plato guardarPlato(Plato datosPlato) throws Exception {
@@ -79,5 +80,4 @@ public class PlatoServicio {
             throw new Exception(error.getMessage());
         }
     }
-
 }

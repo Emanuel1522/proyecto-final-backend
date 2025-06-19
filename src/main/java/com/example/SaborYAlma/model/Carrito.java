@@ -1,4 +1,4 @@
-package com.example.SaborYAlma.models;
+package com.example.SaborYAlma.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -10,8 +10,6 @@ import java.util.List;
 @Table(name = "carritos")
 public class Carrito {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_carrito")
@@ -21,7 +19,6 @@ public class Carrito {
 
     @Column(name = "fecha_creacion")
     private LocalDateTime fechaCreacion;
-
 
 
     //Relacion con cliente N-1
@@ -36,7 +33,6 @@ public class Carrito {
     private List<CarritoItem> carritoItems;
 
 
-
     public Carrito() {
     }
 
@@ -45,8 +41,6 @@ public class Carrito {
         this.estado = estado;
         this.fechaCreacion = fechaCreacion;
     }
-
-
 
     public Integer getId() {
         return id;

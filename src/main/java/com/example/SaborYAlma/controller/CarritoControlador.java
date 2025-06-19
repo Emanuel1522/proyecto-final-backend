@@ -1,6 +1,6 @@
 package com.example.SaborYAlma.controller;
 
-import com.example.SaborYAlma.models.Carrito;
+import com.example.SaborYAlma.model.Carrito;
 import com.example.SaborYAlma.services.CarritoServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,8 +11,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/carritos")
 public class CarritoControlador {
+
     @Autowired
     CarritoServicio servicio;
+
 
     //Guardar
     @PostMapping
@@ -27,7 +29,6 @@ public class CarritoControlador {
                     .body(error.getMessage());
         }
     }
-
 
     // Buscar todos
     @GetMapping
@@ -44,8 +45,6 @@ public class CarritoControlador {
         }
     }
 
-
-
     // Buscar por ID
     @GetMapping("/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable Integer id) {
@@ -60,8 +59,6 @@ public class CarritoControlador {
         }
     }
 
-
-
     // Actualizar
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@PathVariable Integer id, @RequestBody Carrito nuevosDatos) {
@@ -75,8 +72,6 @@ public class CarritoControlador {
                     .body(error.getMessage());
         }
     }
-
-
 
     // Eliminar
     @DeleteMapping("/{id}")

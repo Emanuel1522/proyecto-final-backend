@@ -1,4 +1,4 @@
-package com.example.SaborYAlma.models;
+package com.example.SaborYAlma.model;
 
 import com.example.SaborYAlma.helper.EstadoPedido;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -28,7 +28,6 @@ public class Pedido {
     private LocalDateTime fecha = LocalDateTime.now();
 
 
-
     //Relacion con cliente N-1
     @ManyToOne
     @JoinColumn(name = "fk_cliente", referencedColumnName = "id_cliente")
@@ -41,7 +40,6 @@ public class Pedido {
     private List<DetallesPedido> detallesPedidos;
 
 
-
     public Pedido() {
     }
 
@@ -52,8 +50,6 @@ public class Pedido {
         this.estado = estado;
         this.fecha = fecha;
     }
-
-
 
     public Integer getId() {
         return id;

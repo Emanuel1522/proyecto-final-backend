@@ -1,4 +1,4 @@
-package com.example.SaborYAlma.models;
+package com.example.SaborYAlma.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.example.SaborYAlma.helper.TipoPlato;
@@ -9,29 +9,22 @@ import java.util.List;
 @Table(name = "platos")
 public class Plato {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_plato")
     private Integer id;
 
-    @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
 
-    @Column(name = "descripcion", length = 100, nullable = false)
     private String descripcion;
 
-    @Column(name = "imagen", length = 100, nullable = false)
     private String imagen;
 
-    @Column(name = "precio", nullable = false)
     private Double precio;
 
     @Column(name = "tipo", nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoPlato tipo;
-
 
 
     //Relacion con carrito_items 1-N
@@ -45,7 +38,6 @@ public class Plato {
     private List<DetallesPedido> detallesPedidos;
 
 
-
     public Plato() {
     }
 
@@ -57,8 +49,6 @@ public class Plato {
         this.precio = precio;
         this.tipo = tipo;
     }
-
-
 
     public Integer getId() {
         return id;

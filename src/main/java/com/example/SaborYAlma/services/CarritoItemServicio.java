@@ -1,7 +1,7 @@
 package com.example.SaborYAlma.services;
 
 import com.example.SaborYAlma.helper.APIMensajes;
-import com.example.SaborYAlma.models.CarritoItem;
+import com.example.SaborYAlma.model.CarritoItem;
 import com.example.SaborYAlma.repository.ICarritoItemRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,7 @@ public class CarritoItemServicio {
 
     @Autowired
     ICarritoItemRepositorio repositorio;
+
 
     //Guardar carrito
     public CarritoItem guardarCarritoItem(CarritoItem datosCarritoItem) throws Exception {
@@ -76,5 +77,4 @@ public class CarritoItemServicio {
             throw new Exception(error.getMessage());
         }
     }
-
 }

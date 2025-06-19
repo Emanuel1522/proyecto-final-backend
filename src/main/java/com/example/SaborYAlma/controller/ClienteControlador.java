@@ -1,6 +1,6 @@
 package com.example.SaborYAlma.controller;
 
-import com.example.SaborYAlma.models.Cliente;
+import com.example.SaborYAlma.model.Cliente;
 import com.example.SaborYAlma.services.ClienteServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,8 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/clientes")
 public class ClienteControlador {
+
     @Autowired
     ClienteServicio servicio;
+
 
     //Guardar
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -45,7 +47,6 @@ public class ClienteControlador {
         }
     }
 
-
     // Buscar por ID
     @GetMapping("/{id}")
     public ResponseEntity<?> buscarPorId(@PathVariable Integer id) {
@@ -60,7 +61,6 @@ public class ClienteControlador {
         }
     }
 
-
     // Actualizar
     @PutMapping("/{id}")
     public ResponseEntity<?> actualizar(@PathVariable Integer id, @RequestBody Cliente nuevosDatosCliente) {
@@ -74,7 +74,6 @@ public class ClienteControlador {
                     .body(error.getMessage());
         }
     }
-
 
     // Eliminar
     @DeleteMapping("/{id}")
@@ -95,5 +94,4 @@ public class ClienteControlador {
                     .body(error.getMessage());
         }
     }
-
 }
