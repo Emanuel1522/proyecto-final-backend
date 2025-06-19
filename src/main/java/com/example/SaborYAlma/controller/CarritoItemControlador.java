@@ -32,6 +32,7 @@ public class CarritoItemControlador {
     }
 
     // Buscar todos
+    @GetMapping
     public ResponseEntity<?> buscarTodos() {
         try {
             List<CarritoItem> lista = this.servicio.listaCarritoItem();
