@@ -4,18 +4,6 @@ http://localhost:8080/clientes
     "apellido":"Ramirez",
     "correo":"juan@gmail.com",
     "contraseña":"juan123"
-
-
-
-    //Relacion con carritos 1-N
-    @OneToMany(mappedBy = "cliente")
-    @JsonManagedReference
-    private List<Carrito> carritos;
-
-    //Relacion con pedido 1-N
-    @OneToMany(mappedBy = "cliente")
-    @JsonManagedReference
-    private List<Pedido> pedidos;
 }
 
 
